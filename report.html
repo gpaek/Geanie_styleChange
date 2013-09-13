@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Your Baltimore Neighborhood Matches</title>
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/report.css"/>
+<link rel="stylesheet" type="text/css" href="css/themes/vader/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/themes/vader/jquery.ui.theme.css" />
+<link rel="stylesheet" type="text/css" href="css/tabs_style.css" >
+<link rel="stylesheet" type="text/css" href="css/housePriceStyle.css" />
+<link type="text/css" rel="stylesheet" href="css/housePriceStyle.css" />
+
+<!--Include this debug.css to more easily see what divs are where-->
+<!-- <link rel="stylesheet" type="text/css" href="css/debug.css"/> -->
+
+<!--Google Maps API key-->
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqhhjfXiLBRjsQrE1kdx53ZEe36C-gL58&sensor=false">
+</script>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="scripts/libs/jquery-2.0.3.min.js" ></script>
+<script src="scripts/libs/jquery.ui.core.js"></script>
+<script src="scripts/libs/jquery.ui.widget.js"></script>
+<script src="scripts/libs/jquery.ui.tabs.js"></script>
+<script src="scripts/maps_google.js"></script>
+<script src="scripts/housePriceJS.js"></script>
+<script src="scripts/tabs_old.js"></script>
+<script src="scripts/report.js"></script>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="scripts/libs/responsiveImg.js"></script>
+<script type="text/javascript" src="scripts/libs/jquery-2.0.3.min.js" ></script>
+<script type="text/javascript" src="scripts/libs/jquery.ui.core.js"></script>
+<script type="text/javascript" src="scripts/libs/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="scripts/libs/jquery.ui.tabs.js"></script>
+<!--Matching Algorithm  --  Using it to load the json file into csaData Oject 
+<script src="scripts/matchmaker.js"></script>-->
+<script type="text/javascript" src="scripts/report.js"></script>
+<script type="text/javascript" src="scripts/tabs_old.js"></script>
+<script type="text/javascript" src="scripts/maps_google.js"></script>
+<script type="text/javascript" src="scripts/housePriceJS.js"></script>
+
+</head>
+
+<body>
+	<div id="container">
+
+<header >
+
+  <img id="headerLogo" src="images/logo.png" alt="Insert Logo Here" name="Logo" />
+
+  <!--<div id="headerText"><h1>Home not a House</h1></div>
+  <div class="clearfloat"></div>--> 
+
+<!-- end .header --></header>
+
+<div id="bodyContent">
+
+    <div class = "content" id="tabsContainer">
+    
+      <div id="tabscontent">
+      	<div class="tabpage" id="tabpage_1">
+            <div class="menuWrapper">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span class="hnhIcon mapIcon"></span>
+                            <!--<span class="offScreenTextLink">Map</span>-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span class="hnhIcon housePriceIcon"></span>
+                            <!--<span class="offScreenTextLink">House Price</span>-->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span class="hnhIcon crimeIcon"></span>
+                            <!--<span class="offScreenTextLink">Crime Rate</span>-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="name"><h2>Default Neighborhood-1</h2></div>
+            
+            <div class="slideShow">
+                <img class="responsiveImg" src="images/placeholder.jpg" alt="image1" />
+                <img class="responsiveImg" src="images/placeholder.jpg" alt="image2" />
+                <img class="responsiveImg" src="images/placeholder.jpg" alt="image3" />
+            </div>
+            
+            
+            <div class="crimeRate hide"><p>Crime rate</p></div>
+            <div class="homevalues hide" id="housePriceTrend"><p>Home values</p></div>
+            <div id="map" class="hide"></div>
+            
+            <div class="description"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+          </div>
+            
+            
+          <div class="tabpage" id="tabpage_2">
+            <div class="name"><h2>Default Neighborhood-2</h2></div>
+            <div class="slideShow">Image roll</div>
+            <div class="crimeRate"><p>Crime rate</p></div>
+            <div class="homevalues"><p>Home values</p></div>
+            <div class="map"></div>
+            <div class="description"><p>Description</p></div>
+          </div>
+          
+          <div class="tabpage" id="tabpage_3">
+            <div class="name"><h2>Default Neighborhood-3</h2></div>
+            <div class="slideShow">Image roll</div>
+            <div class="crimeRate"><p>Crime rate</p></div>
+            <div class="homevalues"><p>Home values</p></div>
+            <div class="map"></div>
+            <div class="description"><p>Description</p></div>
+          </div>
+      </div>
+        
+      <div id="tabs">
+          <ul>
+            <li id="tabHeader_1">Default Neighbor-1</li>
+            <li id="tabHeader_2">Default Neighbor-2</li>
+            <li id="tabHeader_3">Default Neighbor-3</li>
+          </ul>
+      </div>
+    
+<!-- end .content --></div>
+
+    <nav>
+        <button onclick="window.location.href='index.html'" type="button" name="returnBtn" class="navButton">
+            Try another set of choices
+        </button>
+    
+    </nav>
+    
+    <!-- end #bodyConent --></div>
+    <footer>
+      <p>
+      To learn more and explore on your own visit:
+      <a href="http://www.livebaltimore.com">Live Baltimore</a> or <a href="http://www.bniajfi.org">
+      Baltimore Neighborhoods Indicator Alliance </a>
+      Or call us at 555-1212, or connect UrbanBaltimre, #UrbanBaltimore
+      </p>
+    <!-- end footer --></footer>
+    
+    <div id="contactRealtorWrapper" class="contactRealtorWrapper" >
+        <div id="contactRealtor_outer">
+            <div id="contactRealtor">
+                <!--<a href="#" id="close_button">x</a>-->
+                <div class="contactRealtor_text">
+                  contact a realtor!  
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- end #container --></div>
+
+</body>
+</html>

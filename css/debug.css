@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+/* Add colro & dotted lines to divs to see what is where */
+
+* {outline:dashed red thin;}
+body { background: #4E5869;}
+#container {background:rgba(255,204,255,1);}
+header {background-color: #6F7D94;}
+#bodyContent {background-color: #009;}
+.content {background-color: #FF0;}
+nav {background-color:rgba(153,255,51,1);}
+footer {background-color: #FFF;}
+
+
+#tabs .tabs-spacer {  outline:medium green dotted;}
+.tabs-bottom {outline:medium white dotted};
+.tabscontent .name {background-color:#eee;}
+.tabscontent .slideShow {background-color:#ccc;}
+.tabscontent .crimeRate {background-color:#aaa;}
+.tabscontent .homevalues {background-color: #999;}
+.tabscontent .map {background-color: #777;}
+.tabscontent .description {background-color: #777;}

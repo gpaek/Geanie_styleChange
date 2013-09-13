@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MICA InfoViz MPS</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/themes/vader/jquery-ui.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/landing.css"/>
+  <!--Include this debug.css to more easily see what divs are where-->
+  <!--<link rel="stylesheet" type="text/css" href="css/debug.css"/>-->
+  
+  <!--Javascript Libraries-->
+  <script src="scripts/libs/jquery-2.0.3.min.js"></script>
+  <script src="scripts/libs/jquery-ui.js"></script>
+  <!--Matching Algorithm-->
+  <script src="scripts/matchmaker.js"></script>
+  <!-- Slider -->
+  <script src="scripts/slider.js"></script>
+  <!-- SlideShow -->
+  <script src="scripts/slideshow.js"></script>
+</head>
+
+<body>
+  
+  <div id="container">
+    <div id="slideshow">
+      <img class='active' src='images/Baltimore-skyline-pleasant-day.jpg' alt=''/>
+      <img src='images/baltimore-skyline-night.jpg' alt=''/>
+    </div>
+    <header id="header" >
+      <img id="headerLogo" src="images/logo.png" alt="Insert Logo Here" name="Logo" />
+      <div id="headerText"><h3><a href='http://www.mica.edu/Programs_of_Study/Graduate_Programs/Information_Visualization_(Online_MPS).html' target='blank'>A Project by MICA InfoViz MPS</a></h3></div>
+    <!--<div class="clearfloat"></div> -->
+    </header><!-- end .header -->
+    <!--Extra div to make #contentwrapper sit in middle of page-->
+    <div class="floater"></div>
+    <div id="bodyContent">
+
+      <div id="content">
+        <h2>Let's find your new neighborhood.</h2><br />
+
+        <!--Form Beginning-->
+        <div id="formwrapper">
+          <div class="form">
+            <form action="#" method="get"> 
+              <p>
+                  <label for="amount">Price range:</label><br />
+                  <input type="text" id="amount" name="Value" />
+              </p>
+              <div id="price-range" class="price"></div>     
+              <br><br>
+
+              <p>
+                <label for="crime">Crime Comfort Level:</label><br />
+                <input type="text" size="60" id="crime" />
+              </p>              
+              <div id="crime-range" class="crimerate"></div>
+              <div id="labelwrapper">
+  				<p class="labelmedium">I have six locks on my door!</p>
+                <p class="labelsmall">I don't like to walk alone.</p>
+                <p class="labelmedium">I don't mind a little character.</p>
+                <p class="labelsmall">I have some street skills.</p>
+                <p class="labellarge">I'm used to rough neighborhoods.</p>
+                <p class="labellarge">People should watch out for me!</p>
+              </div>
+             
+              <br clear="all">
+				<br>
+              <nav>
+                <!--<button id="findbuttonSamePage" type="button" name="returnBtn" class="navButton">
+                  <a href="#">Find! (samePage)</a>
+                </button>-->
+                <button id="findbuttonNewPage" type="button" name="returnBtn" class="navButton"> 
+                  <!--<a href="report.html">Find!</a>-->
+                  <a href="#">Find Your Neighborhood Matches</a>
+                </button>
+              </nav>
+
+           </form>
+          </div> <!--end .form-->
+          
+          <div class="report">
+          <h1>This is the report</h1>
+          <ul></ul>
+          </div>
+          
+        
+        </div> <!-- end #formwrapper-->
+        <!--Form End-->
+      </div> <!-- end #content -->
+      
+      
+    </div> <!-- end #contentwrapper -->
+
+    <footer>
+      <!--<p>  
+      <a href="#">About</a> 
+      </p>-->
+    </footer><!-- end footer -->
+
+  </div><!-- end #container -->
+</body>
+</html>

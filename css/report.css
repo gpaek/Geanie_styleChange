@@ -1,0 +1,244 @@
+@charset "utf-8";
+/* CSS Document */
+/* This is the report CSS style.
+Everyting here should be contained within the .content div
+which is defiend in style.css
+*/
+
+.hide {
+	display: none;
+}
+
+.tabscontentOrig {
+height: 500px;
+position:relative;
+background-color:#000;
+opacity: .9
+}
+
+#tabscontent .name {
+/*position: absolute;
+width: 100%;
+height: 50px;
+left: 0;
+top: 10px;
+text-align:center;*/
+}
+
+#tabscontent .slideShow {
+	width: 100%;
+/*position: absolute;
+
+height: 200px;
+left: 0;
+top: 60px;
+#tabscontent .name {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	left: 0;
+	top: 10px;
+	text-align:center;
+}*/
+}
+#tabscontent .slideShow {
+	/*position: absolute;
+	height: 200px;
+	left: 0;
+	top: 60px;*/
+	width: 100%;
+	text-align: center;
+
+}
+.slideShow .responsiveImg {
+	margin: 30px 0 20px;
+	max-width: 30%;
+}
+
+
+
+
+/***************/
+/* these are temporary to show placements */
+
+
+
+#map {
+	/*position: absolute;*/
+	display: none;
+	width: 300px;
+	height: 200px;
+	left: 200px;
+	top: 300px;
+}
+#tabscontent .description {
+	/*position: absolute;
+	width: 450px;
+	height: 200px;
+	right: 20px;
+	top: 310px;*/
+	margin: 0 auto;
+	width: 92%
+}
+
+.description p {
+	font-size: 12px;
+	line-height: 150%;
+}
+	
+/***************/
+/* these are temporary to show placements */
+#tabscontent h2 {
+	/*margin: 0 auto;*/
+	font-weight: 300;
+	font-size: 38px;
+	line-height: 200%
+	/*text-align:center;*/
+	/*border:dashed white thin;
+	 this should be reconciled with the tab styles */
+	/*color: white;*/
+}
+/*#tabscontent .slideShow h3 {
+	line-height: 190px;
+}
+#tabscontent .crimeRate h3 {
+	line-height: 50px;
+}
+#tabscontent .homevalues h3 {
+	line-height: 70px;
+}
+#tabscontent .map h3 {
+line-height: 150px;
+}
+#tabscontent .description h3 {
+	line-height: 150px;
+}*/
+
+
+
+
+
+
+/* overlay menu */
+.menuWrapper ul {
+	padding: 0;
+	margin: 0;
+}
+.menuWrapper li{
+	display: inline-block;
+	list-style-type: none;
+	background-color:#efefef;
+	width: 32px;
+	font-size: 12px;
+	padding: 10px 15px 6px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.offScreenTextLink {
+	/*display: none;*/
+}
+.menuWrapper li:hover {
+	background-color: #ffe400;
+	/*width: 120px;
+	transition: width .3s;
+	-webkit-transition: width .3s;*/
+}
+.menuWrapper li:hover .offScreenTextLink {
+	/*display: inline-block;*/
+}
+.menuWrapper li a{
+	text-decoration: none;	
+	color: #666;
+}
+.menuWrapper li:hover a{
+	color: #000;
+}
+.menuWrapper li:hover .mapIcon {
+	width: 32px;
+	height: 35px;
+	background-position: -200px 0;
+}
+.menuWrapper li:hover .housePriceIcon {
+	width: 32px;
+	height: 35px;
+	background-position: -200px -50px;
+}
+.menuWrapper li:hover .crimeIcon {
+	width: 32px;
+	height: 35px;
+	background-position: -200px -100px;
+}
+.hnhIcon {
+	background-image: url(../images/HNH_icon.png);
+	background-repeat: no-repeat;
+	background-color: transparent;	
+	display: inline-block;
+	overflow: hidden;
+	padding: 0;
+	margin-right: 5px;
+	border: 0;
+	vertical-align: middle;
+	color: transparent;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -9999px;
+	*display:inline; /* Fixes for IE7 Support */
+	*text-indent:0;
+	*zoom: 1;
+}
+.mapIcon {
+	width: 32px;
+	height: 35px;
+	background-position: 0 0;
+}
+
+.housePriceIcon {
+	width: 32px;
+	height: 35px;
+	background-position: 0 -50px;
+}
+
+.crimeIcon {
+	width: 32px;
+	height: 35px;
+	background-position: 0 -100px;
+}
+
+
+/* contact a realtor */
+#contactRealtorWrapper {
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+	right: 0;
+}
+
+.contactRealtorWrapper {
+	width: 230px;
+}
+.contactRealtorWrapper #contactRealtor_outer {
+	border: 5px solid white;
+	border-radius: 50% 50% 0 50%;
+	box-shadow: -3px 3px 5px rgba(0,0,0,.5);
+	margin-bottom: 0;
+}
+.contactRealtorWrapper #contactRealtor {
+	background-color: white;
+	border: 4px solid #E2DDD1;
+	border-right: none;
+	border-bottom: none;
+	border-radius: 50% 50% 0 50%;
+	font-size: 0.9em;
+	height: 215px;
+	margin-bottom: 0;
+	text-align: center;
+}
+.contactRealtorWrapper a#close_button {
+	float: right;
+	margin-right: 10px;
+	color: #01769f;
+}
+.contactRealtorWrapper .contactRealtor_text {
+	font-size: 14px;
+	margin: 25px 0 14px 0;
+}
